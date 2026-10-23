@@ -1,0 +1,20 @@
+{
+  "name": "surplusloop",
+  "version": "1.0.0",
+  "description": "SurplusLoop - Autonomous Multi-Agent Food Rescue System",
+  "private": true,
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build": "npm run build:server && npm run build:client",
+    "test": "npm --prefix server run test && npm --prefix client run test",
+    "evaluate": "npm --prefix server run evaluate",
+    "audit": "npm audit"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
